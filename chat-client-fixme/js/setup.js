@@ -104,6 +104,8 @@ var displayData = function(data, user) {
   });
 };
 
+
+//sending the data to the server
 var postData = function(message, username) {
   $.ajax({
     url: SERVER_URL,
@@ -115,6 +117,8 @@ var postData = function(message, username) {
     }),
     success: function(data) {
       console.log('Success!', data);
+      //it will bring the data from the server then show it in the chat
+      getData()
     },
     error: function(data) {
       console.log(data);
